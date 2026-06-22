@@ -11,6 +11,8 @@
   - Cloudflare routes incoming requests for your domain through that same tunnel, back to your server.
   - Your server never exposes any public IP or open ports. All traffic is proxied through Cloudflare's network.
 
+<img src="./images/image.png" width="800px">
+
 ## Benefits of using Cloudflare Tunnel:
 
 - You want zero open inbound ports. Right now your EC2 security group almost certainly still allows inbound 80/443 (and probably 22) from the internet, even with orange-cloud proxying — Cloudflare's proxy hides your IP from casual lookups, but if someone finds your real origin IP, those ports are still live and attackable. Tunnel removes that exposure entirely.
