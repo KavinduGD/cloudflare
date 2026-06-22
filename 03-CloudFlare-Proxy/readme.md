@@ -31,9 +31,11 @@ Cloudflare then forwards the request to your EC2 instance.
 
 ### Apply proxy to your domain in Cloudflare
 
-To use Cloudflare as a reverse proxy, you need to enable the proxy setting for your domain's DNS record in the Cloudflare dashboard. This is done by toggling the cloud icon next to your DNS record to orange (proxied) instead of gray (DNS only).
+- To use Cloudflare as a reverse proxy, you need to enable the proxy setting for your domain's DNS record in the Cloudflare dashboard. This is done by toggling the cloud icon next to your DNS record to orange (proxied) instead of gray (DNS only).
 
 - In Cloudflare, the proxy setting is applied per DNS record, not for the entire DNS zone.
+
+- Orange cloud (Proxied) ☁️ → Cloudflare CDN, caching, DDoS protection, and WAF are active.
 
 <img src="./images/image.png" width=600px>
 
