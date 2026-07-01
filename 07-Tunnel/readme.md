@@ -20,3 +20,11 @@
 - You're behind NAT or don't have a public IP, e.g. running a server at home, in a Docker container with no port forwarding, or on a cloud instance without a public IP. Tunnel solves this without any router config.
 - You want to expose SSH, RDP, or internal admin panels safely without ever opening those ports publicly. This is one of the strongest use cases — pairs well with Cloudflare Access for authentication.
 - You're running multiple internal services (dashboards, dev environments, internal tools) you don't want indexed or scanned by the internet at all.
+
+---
+
+- Cloudflare Tunnel automatically provides HTTPS for the traffic between the internet and Cloudflare's edge network.
+- It generates a free SSL certificate for your domain.
+- Here is how it works:
+  - Edge to Internet: Users visiting your site connect via HTTPS. Cloudflare automatically handles the encryption and issues the certificate.
+  - Origin to Edge: You can choose how Cloudflare connects to your local server. It can use HTTPS (with your own local certificate) or HTTP. Because the connection is routed through Cloudflare Tunnel, the traffic is already encrypted and secure.
